@@ -1,0 +1,218 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cm-blue: #1896D3;
+    --cm-yellow: #FDB128;
+    --heading-text: black;
+    --descriptive-text: #5a5c5a;
+    --cm-white: whitesmoke; 
+    --transparent-black: rgba(0, 0, 0, 0.4);
+}
+
+*{
+    font-family: 'Inter', 'Times New Roman', Times, serif;
+    
+}
+
+body{
+    margin: 0;
+    border: 0;
+}
+
+.cm-logo{
+    height: 4rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.cm-logo:hover{
+    transform: scale(1.05);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 1.85rem;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.nav-bar > a{
+    text-decoration: none;
+    border-bottom: solid transparent 2px;
+    color: var(--descriptive-text);
+    transition: box-shadow 0.3s ease;
+
+    
+}
+
+.nav-bar > a:hover{
+    box-shadow: 0 .15rem 0  var(--cm-blue);
+}
+
+.hs-div{
+    display: flex;
+    justify-content: center;
+}
+
+.header-section{
+    /*Don't forget to replace the image with a blurrier one at some point.
+    
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    You will forget, do not forget. 
+    */
+
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;  
+    align-items: center;
+    background-image: url('assets/Church_Background.webp');
+    background-size: cover;
+    height: 500px;
+    width: 70rem;
+    border-radius: 30px;
+    
+    
+}
+
+.bib-eq-slogan{
+
+}
+
+.bib-eq{
+    font-size: 4rem;
+    font-weight: 700;
+    color: whitesmoke;
+    margin: 0;
+}
+
+
+.bib-eq-caption{
+    font-size: 1.75rem;
+    font-weight: 200;
+    max-width: 25ch;
+    color: whitesmoke;
+    margin: 0;
+
+}
+
+
+.purchase{
+    font-size: 2rem;
+    font-weight: 600;
+    color: whitesmoke;
+    padding: 2.5rem;
+    border: solid var(--cm-yellow) .1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--transparent-black);
+    transition: font-size .25s ease-in-out;
+}
+
+.purchase:hover{
+cursor: pointer;
+font-size: 2.05rem;
+}
+
+.info-section{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 70rem;
+}
+
+.info-head{
+    margin-top: 3.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.info-tail{
+    margin-bottom: 3.5rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.tabs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70rem;
+    gap: 2rem;
+}
+
+.tab{
+    gap: 10rem;
+    border: solid black;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 70rem;
+    cursor: pointer;
+}
+
+
+.qsvg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+    width: 100%;
+    
+}
+
+
+.qsvg > p{
+    padding-left: 2rem;
+}
+
+.qsvg > svg{
+    padding-right: 1rem;
+}
+
+.comment-hidden{
+    display: none;
+    padding-left: 2rem;
+}
+
+
+.comment{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: block;
+    color: var(--descriptive-text);
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+
+
+footer{
+    margin-top: 3.5rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--cm-blue);
+    color: var(--cm-white);
+}
+
+
+
+
+
+
+
