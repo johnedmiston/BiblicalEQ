@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 :root{
     --cm-blue: #1896D3;
     --cm-yellow: #FDB128;
@@ -18,6 +20,10 @@
 body{
     margin: 0;
     border: 0;
+    background-color: rgba(194, 189, 189, 0.082);
+    background-image: url(assets/alessio-soggetti-cfKC0UOZHJo-unsplash.jpg);
+
+    
 }
 
 .cm-logo{
@@ -35,6 +41,9 @@ body{
     align-items: center;
     justify-content: space-evenly;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid var(--descriptive-text) 1px;
+    background-color: white;
 }
 
 .nav-bar{
@@ -45,6 +54,15 @@ body{
 }
 
 .nav-bar > a{
+    text-decoration: none;
+    border-bottom: solid transparent 2px;
+    color: var(--descriptive-text);
+    transition: box-shadow 0.3s ease;
+
+    
+}
+
+.nav-combo > a{
     text-decoration: none;
     border-bottom: solid transparent 2px;
     color: var(--descriptive-text);
@@ -80,6 +98,7 @@ body{
     height: 500px;
     width: 70rem;
     border-radius: 30px;
+    box-shadow: 2px 2px 10px gray;
     
     
 }
@@ -111,7 +130,7 @@ body{
     font-weight: 600;
     color: whitesmoke;
     padding: 2.5rem;
-    border: solid var(--cm-yellow) .1rem;
+    border: solid var(--cm-blue) .1rem;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -139,6 +158,12 @@ font-size: 2.05rem;
     font-weight: 700;
 }
 
+.info-head-2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
 .info-tail{
     margin-bottom: 3.5rem;
     font-style: italic;
@@ -157,12 +182,14 @@ font-size: 2.05rem;
 
 .tab{
     gap: 10rem;
-    border: solid black;
+    border: solid var(--cm-yellow);
     width: 100%;
     font-size: 2rem;
     font-weight: 600;
     max-width: 70rem;
     cursor: pointer;
+    background-color: white;
+    box-shadow: 2px 2px 6px rgba(128, 128, 128, 0.774);
 }
 
 
@@ -200,19 +227,373 @@ font-size: 2.05rem;
     padding-bottom: 2rem;
 }
 
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.menu-items-invisible{
+    margin-top: 2rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: black;
+    position: absolute;
+    display: none;
+}
 
-footer{
-    margin-top: 3.5rem;
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--cm-blue);
-    color: var(--cm-white);
+.menu-items{
+    margin-top: 2rem;
+    margin-right: 8rem;
+    height: 16rem;
+    width: 10rem;
+    background-color: white;
+    box-shadow: 1px 3px 5px var(--descriptive-text);
+    position: absolute;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 1rem;
+}
+
+.menu-items > a{
+    text-decoration: none;
+}
+
+.nav-combo{
+    display: flex;
+    align-items: center;
+    color: var(--descriptive-text);
+    transition: box-shadow 0.3s ease;
+    gap: 1rem;
+}
+
+.nav-combo > a{
+    border-bottom: 0;
+}
+
+.nav-combo:hover{
+    box-shadow: 0 .15rem 0  var(--cm-blue);
 }
 
 
 
 
+footer{
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    font-size: .9rem;
+    text-align: center;
+    background-color: var(--cm-blue);
+    color: var(--cm-white);
+}
+
+.hiddenmenu{
+    display: none;
+}
+
+.hiddenmenu:hover{
+    cursor: pointer;
+}
 
 
+.nav-element{
+    display: block
+}
 
+@media (width < 1160px) {
+    .header-section{
+        /*Don't forget to replace the image with a blurrier one at some point.
+        
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+        You will forget, do not forget. 
+        */
+    
+        height: 400px;
+        width: 60rem;
+
+        
+        
+    }
+
+    .info-section{
+        width: 60rem;
+    }
+
+    .tabs{
+        width: 60rem;
+    }
+}
+
+@media (width < 1005px){
+    .header-section{
+        /*Don't forget to replace the image with a blurrier one at some point.
+        
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+        You will forget, do not forget. 
+        */
+    
+        height: 350px;
+        width: 50rem;
+        gap: 3rem;
+
+        
+        
+    }
+
+    .info-section{
+        width: 50rem;
+    }
+
+    .tabs{
+        width: 50rem;
+    }
+
+    .purchase{
+        font-size: 1.5rem;
+    }
+
+    .purchase:hover{
+        font-size: 1.6rem;
+    }
+
+    .bib-eq{
+        font-size: 3rem;
+    }
+
+    .bib-eq-caption{
+        font-size: 1.25rem;
+    }
+}
+
+
+@media (width < 840px){
+
+    .info-section{
+        width: 40rem;
+    }
+
+    .info-head{
+        font-size: 1.5rem;
+    }
+
+    .info-head-2{
+        font-size: 1.5rem;
+    }
+
+    .tabs{
+        width: 40rem;
+    }
+}
+
+
+@media (width < 810px) {
+    .header-section{
+        border-radius: 0px;
+    }
+}
+
+@media (width < 707px) {
+   .header-section{
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+
+   }
+   
+   .bib-eq{
+    font-size: 2.5rem;
+   }
+
+   .hidemenu{
+    display: block;
+   }
+
+   .header{
+    flex-direction: column;
+   }
+}
+
+
+@media (width < 680px) {
+
+    .info-section{
+        width: 35rem;
+    }
+
+    .tabs{
+        width: 35rem;
+    }
+
+    .tab{
+        font-size: 1.5rem;
+    }
+
+    .comment{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        font-size: .75rem;
+    }
+    
+}
+
+@media (width < 587px) {
+    .info-section{
+        width: 25rem;
+    }
+
+    .tabs{
+        width: 25rem;
+    }
+
+    .tab{
+        font-size: 1.2rem;
+    }
+
+    .comment{
+        font-size: 1.1rem;
+    }
+}
+
+@media (width < 530px) {
+    .header{
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    
+    
+    }
+
+    .header > nav > a{
+        display: none;
+    }
+
+    .hiddenmenu{
+        display: block;
+    }
+
+    .header-section{
+        margin-top: 2rem;
+    }
+
+    .nav-bar{
+        font-size: .5rem;
+    }
+}
+
+@media (width < 432px) {
+    .info-section{
+        width: 22rem;
+    }
+
+    .info-head{
+        font-size: 1.2rem;
+    }
+
+    .info-head-2{
+        font-size: 1.2rem;
+    }
+
+    .info-tail{
+        font-size: 1.2rem;
+    }
+
+    .blurb{
+        font-size: .9rem;
+    }
+
+    .tabs{
+        width: 22rem;
+    }
+
+    .tab{
+        font-size: 1rem;
+    }
+
+    .comment{
+        font-size: .9rem;
+    }
+
+    
+
+}
+
+@media (width < 400px) {
+
+.bib-eq{
+    font-size: 2rem;
+}
+
+.bib-eq-caption{
+    font-size: 1rem;
+}
+
+.purchase{
+    padding: 2rem;
+}
+
+}
+
+@media (width < 384px) {
+    .info-section{
+        width: 20rem;
+    }
+
+    .info-head{
+        font-size: 1.1rem;
+    }
+
+    .info-head-2{
+     font-size: 1.1rem;   
+    }
+
+    .info-tail{
+        font-size: 1rem;
+    }
+
+    .blurb{
+        font-size: .9rem;
+    }
+
+    .tabs{
+        width: 20rem;
+    }
+
+    .tab{
+        font-size: .85rem;
+    }
+
+    .comment{
+        font-size: .9rem;
+    }
+
+}
+
+
+.nav-visible{
+    display: block;
+}
+
+.nav-hidden{
+    display: none;
+}
+
+
+@media (width > 530px) {
+    .nav-visible{
+        display: none;
+    }
+
+    .menu-items{
+        display: none;
+    }
+    }
