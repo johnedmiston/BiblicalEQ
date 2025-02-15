@@ -182,7 +182,7 @@ font-size: 2.05rem;
 
 .tab{
     gap: 10rem;
-    border: solid var(--cm-yellow);
+    border: solid var(--cm-blue);
     width: 100%;
     font-size: 2rem;
     font-weight: 600;
