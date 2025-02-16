@@ -11,11 +11,12 @@ function cmGoAmazon(){
 
     const cmAmazon = document.querySelector('.purchase')
 
+
+        if (cmAmazon){
         cmAmazon.addEventListener('click', ()=>{
             window.open('https://www.amazon.com/Biblical-EQ-Christian-Emotional-Transformation/dp/1419649132/');
-            console.log('Im clicked.' )
         })
-    
+        }
 }
 
 
@@ -26,7 +27,6 @@ function openComment(){
 
     const openUp = tab.querySelector('.comment-hidden')
 
-    const chev = tab.querySelector('.chev')
 
     tab.addEventListener('click', ()=>{
 
@@ -42,8 +42,6 @@ function openComment(){
 }
 
 function openMenu(){
-
-    let value = 1
 
     const menu = document.querySelector('.hiddenmenu')
 
@@ -71,6 +69,7 @@ function openMenu(){
 
         menuItems.classList.toggle('menu-items')
 
+        console.log('You clicked the menu')
 
     })
 }

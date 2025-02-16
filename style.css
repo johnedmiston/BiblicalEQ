@@ -18,6 +18,7 @@
 }
 
 body{
+    height: 100%;
     margin: 0;
     border: 0;
     background-color: rgba(194, 189, 189, 0.082);
@@ -62,6 +63,24 @@ body{
     
 }
 
+.nav-bar > .read{
+    animation: readGlow 1s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes readGlow {
+    from {
+        box-shadow: 0 .15rem 0  none;
+        color: var(--descriptive-text);
+    }
+
+    to {
+        box-shadow: 0 .15rem 0  var(--cm-yellow);
+        color: var(--cm-yellow);
+    }
+}
+
 .nav-combo > a{
     text-decoration: none;
     border-bottom: solid transparent 2px;
@@ -70,6 +89,8 @@ body{
 
     
 }
+
+
 
 .nav-bar > a:hover{
     box-shadow: 0 .15rem 0  var(--cm-blue);
@@ -130,13 +151,15 @@ body{
     font-weight: 600;
     color: whitesmoke;
     padding: 2.5rem;
-    border: solid var(--cm-blue) .1rem;
+    border: solid var(--cm-blue) .15rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     background-color: var(--transparent-black);
     transition: font-size .25s ease-in-out;
 }
+
+
 
 .purchase:hover{
 cursor: pointer;
@@ -188,10 +211,17 @@ font-size: 2.05rem;
     font-weight: 600;
     max-width: 70rem;
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.295);
     box-shadow: 2px 2px 6px rgba(128, 128, 128, 0.774);
+    border-radius: 13px;
+    transition: border .2s ease-in-out, transform .1s ease-in-out;
+
 }
 
+.tab:hover{
+    border: solid var(--cm-yellow);
+    transform: scale(1.02);
+}
 
 .qsvg{
     display: flex;
@@ -222,8 +252,9 @@ font-size: 2.05rem;
     padding-right: 2rem;
     display: block;
     color: var(--descriptive-text);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    font-style: italic;
     padding-bottom: 2rem;
 }
 
@@ -259,6 +290,7 @@ font-size: 2.05rem;
     font-size: 1rem;
     font-weight: 500;
     gap: 1rem;
+    border-radius: 13px;
 }
 
 .menu-items > a{
@@ -305,6 +337,63 @@ footer{
 .nav-element{
     display: block
 }
+
+.purchase-hidden{
+    display: none;
+}
+
+
+.content-container{
+    min-height: 100vh;
+}
+
+.info-and-book{
+    display: flex;
+}
+
+.bib-image{
+    max-height: 15rem;
+    max-width: 5rem;
+    
+}
+
+.mp3tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.tabmp3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cm-blue);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-height: 40px;
+    max-width: 300px;
+    transition: color .1s ease-in-out
+    
+}
+
+.tabmp3 > svg{
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+}
+
+.tabmp3:hover{
+    color: var(--cm-yellow);
+}
+
+.tabcombo{
+    display: flex;
+    align-items: center;
+    color: var(--cm-blue);
+    gap: 1rem;
+}
+
+
 
 @media (width < 1160px) {
     .header-section{
@@ -574,6 +663,9 @@ footer{
 
     .comment{
         font-size: .9rem;
+    }
+    .tabmp3{
+        font-size: 1rem;
     }
 
 }
