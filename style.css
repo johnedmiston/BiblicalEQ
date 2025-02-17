@@ -10,6 +10,7 @@
     --descriptive-text: #5a5c5a;
     --cm-white: whitesmoke; 
     --transparent-black: rgba(0, 0, 0, 0.4);
+    --cm-transparent-yellow:#f7e0b6;
 }
 
 *{
@@ -156,7 +157,7 @@ body{
     align-items: center;
     gap: 1rem;
     background-color: var(--transparent-black);
-    transition: font-size .25s ease-in-out;
+    transition: font-size .25s ease-in-out, border .15s ease-in-out;
 }
 
 
@@ -164,6 +165,8 @@ body{
 .purchase:hover{
 cursor: pointer;
 font-size: 2.05rem;
+border: solid var(--cm-yellow) .25rem;
+
 }
 
 .info-section{
@@ -211,8 +214,9 @@ font-size: 2.05rem;
     font-weight: 600;
     max-width: 70rem;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.295);
-    box-shadow: 2px 2px 6px rgba(128, 128, 128, 0.774);
+    color: rgb(255, 255, 255);
+    background-color:#f7e0b6;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.829);
     border-radius: 13px;
     transition: border .2s ease-in-out, transform .1s ease-in-out;
 
@@ -358,8 +362,9 @@ footer{
 }
 
 .mp3tabs{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
     gap: 1.1rem;
 }
 
@@ -367,13 +372,19 @@ footer{
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
-    color: var(--cm-blue);
+    color: white;
+    padding: 1rem;
+    background-color: var(--cm-transparent-yellow);
+    border: solid var(--cm-blue);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 1rem;
     max-height: 40px;
     max-width: 300px;
-    transition: color .1s ease-in-out
+    transition: border .2s ease-in-out, transform .1s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(133, 133, 133, 0.829);
+
     
 }
 
@@ -383,7 +394,8 @@ footer{
 }
 
 .tabmp3:hover{
-    color: var(--cm-yellow);
+    border: solid var(--cm-yellow);
+    transform: scale(1.02);
 }
 
 .tabcombo{
@@ -480,6 +492,10 @@ footer{
     .tabs{
         width: 40rem;
     }
+
+    .tabmp3{
+        font-size: .85rem;
+    }
 }
 
 
@@ -508,6 +524,15 @@ footer{
    .header{
     flex-direction: column;
    }
+
+   .mp3tabs{
+    grid-template-columns: 1fr;
+}
+
+.tabmp3{
+    font-size: 1.3rem;
+}
+
 }
 
 
@@ -552,6 +577,8 @@ footer{
         font-size: 1.1rem;
     }
 }
+
+
 
 @media (width < 530px) {
     .header{
@@ -666,6 +693,7 @@ footer{
     }
     .tabmp3{
         font-size: 1rem;
+        max-width: 250px;
     }
 
 }
