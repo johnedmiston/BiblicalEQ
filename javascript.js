@@ -39,6 +39,23 @@ function openComment(){
 
     })
     })
+
+    document.querySelectorAll('.tab-2').forEach(tab => {
+
+        const openUp = tab.querySelector('.comment-hidden')
+    
+    
+        tab.addEventListener('click', ()=>{
+    
+            if (openUp){
+    
+            openUp.classList.toggle('comment')
+    
+            
+            }
+    
+        })
+        })
 }
 
 function openMenu(){
