@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* CSS Document */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Brand Colors*/
+$background: #476d7e;
+$foreground:#fef4c8;
+$accent: #e09a25;
+
+/*Button Colors*/
+$hovertext:$accent;
+
+/*Font Sizes*/
+$multiplier:1.2;
+$pDeskSize:calc(16px * $multiplier);
+$h1DeskSize:calc(20px * $multiplier);
+$h3DeskSize:calc(18px * $multiplier);
+
+$multiplier:1.0;
+$pTabletSize:calc(16px * $multiplier);
+$h1TabletSize:calc(20px * $multiplier);
+$h3TabletSize:calc(18px * $multiplier);
+
+$multiplier:1.0;
+$pPhoneSize:calc(16px * $multiplier);
+$h1PhoneSize:calc(20px * $multiplier);
+$h3PhoneSize:calc(18px * $multiplier);
+
+/*Other Properties*/
+$boxShadow:2px 2px 10px rgba(0, 0, 0, 0.25);
+$borderRadius: 12px;
+
+/*Grid Widths*/
+$closewidth: 10px;
+$gridwidth: 30px;
+
+/*Fonts*/
+@font-face {
+	font-family: 'poppins';
+	src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+/*Element Defaults and Overrides*/
+html{
+    width:100%; /*chromium engine bug fix*/
+    height:auto;
+    margin: 0 auto;
+    padding: 0;
+}
+ol, ul{
+    margin-left: 35px;
+}
+/*Font Configurations*/
+h1, h2, h3, h4, h5, h6, p, li{
+    font-family: "poppins-header", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: $foreground;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+p, li{
+    font-weight: 300;
+    font-family: "poppins", sans-serif;
+    font-size: $pPhoneSize;
+    @media screen and (min-width: 600px){
+        font-size: $pTabletSize
+    }
+    @media screen and (min-width: 1025px){
+        font-size: $pDeskSize;
+    }
+}
+h1{
+    font-size: $h1PhoneSize;
+    @media screen and (min-width: 600px){
+        font-size: $h1TabletSize
+    }
+    @media screen and (min-width: 1025px){
+        font-size: $h1DeskSize;
+    }
+}
+h3{
+    font-size: $h3PhoneSize;
+    @media screen and (min-width: 600px){
+        font-size: $h3TabletSize
+    }
+    @media screen and (min-width: 1025px){
+        font-size: $h3DeskSize;
+    }
+}
+body{
+    background-color: $background;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height:max-content;
+    margin: 0 auto;
+}
+.hide{
+    display:none;
+}
+.red{
+    background-color: red;
+}
+hr{
+    height: 4px;
+    background-color: $accent;
+    margin: $closewidth 0px;
+}
