@@ -18,17 +18,17 @@ $accent: #e09a25;
 $multiplier:1.2;
 $pDeskSize:calc(16px * $multiplier);
 $h1DeskSize:calc(20px * $multiplier);
-$h3DeskSize:calc(18px * $multiplier);
+$h2DeskSize:calc(18px * $multiplier);
 
 $multiTablet:1.1;
 $pTabletSize:calc(16px * $multiTablet);
 $h1TabletSize:calc(20px * $multiTablet);
-$h3TabletSize:calc(18px * $multiTablet);
+$h2TabletSize:calc(18px * $multiTablet);
 
 $multiPhone:1.0;
 $pPhoneSize:calc(16px * $multiPhone);
 $h1PhoneSize:calc(20px * $multiPhone);
-$h3PhoneSize:calc(18px * $multiPhone);
+$h2PhoneSize:calc(18px * $multiPhone);
 
 /*Other Properties*/
 $shadow:2px 2px 5px rgba(0, 0, 0, 0.4);
@@ -111,13 +111,13 @@ h1{
         font-size: $h1DeskSize;
     }
 }
-h3{
-    font-size: $h3PhoneSize;
+h2{
+    font-size: $h2PhoneSize;
     @media screen and (min-width: 600px){
-        font-size: $h3TabletSize
+        font-size: $h2TabletSize
     }
     @media screen and (min-width: 1025px){
-        font-size: $h3DeskSize;
+        font-size: $h2DeskSize;
     }
 }
 body{

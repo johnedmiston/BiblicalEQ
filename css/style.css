@@ -98,16 +98,16 @@ h1 {
   }
 }
 
-h3 {
+h2 {
   font-size: 18px;
 }
 @media screen and (min-width: 600px) {
-  h3 {
+  h2 {
     font-size: 19.8px;
   }
 }
 @media screen and (min-width: 1025px) {
-  h3 {
+  h2 {
     font-size: 21.6px;
   }
 }
