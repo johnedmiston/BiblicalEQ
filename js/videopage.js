@@ -1,16 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search);
-const categoryUrl = urlParams.get('category');
-const subcatUrl = urlParams.get('sub');
-const categoryName = document.getElementById("category-name");
-const targetCategory = categories[parseInt(categoryUrl)].sub[parseInt(subcatUrl)];
-console.log('Looking for category:', targetCategory);
-
-categoryName.innerHTML = "<h1>" + targetCategory + "</h1>";
-document.title = targetCategory + " - Information Security Links";
-
 // Use this alternative approach to avoid nesting everything in a callback
 $.ajax({
-    url: "/html/elements/cards.html",
+    url: "/html-elem/cards.html",
     async: false,
     success: function(data) {
         $("#cardContainer").html(data);

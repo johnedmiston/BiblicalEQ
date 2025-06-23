@@ -8,18 +8,21 @@
 }
 
 /*Brand Colors*/
-/*Button Colors*/
 /*Font Sizes*/
 /*Other Properties*/
 /*Grid Widths*/
 /*Fonts*/
 @font-face {
-  font-family: "poppins";
-  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-family: "Goudy-Bookletter";
+  src: url("/fonts/goudy-bookletter1911.otf") format("opentype");
+}
+@font-face {
+  font-family: "Legendum";
+  src: url("/fonts/legendum.otf") format("opentype");
 }
 /*Element Defaults and Overrides*/
 html {
-  width:100%; /*chromium engine bug fix*/
+  width: 100%; /*chromium engine bug fix*/
   height: auto;
   margin: 0 auto;
   padding: 0;
@@ -31,31 +34,54 @@ ol, ul {
 
 /*Font Configurations*/
 h1, h2, h3, h4, h5, h6, p, li {
-  font-family: "poppins-header", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #fef4c8;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  color: #e09a25;
   font-weight: 500;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Goudy-Bookletter", sans-serif;
 }
 
-p, li {
+p, li a {
   font-weight: 300;
-  font-family: "poppins", sans-serif;
+  font-family: "Legendum", sans-serif;
   font-size: 16px;
 }
 @media screen and (min-width: 600px) {
-  p, li {
-    font-size: 16px;
+  p, li a {
+    font-size: 17.6px;
   }
 }
 @media screen and (min-width: 1025px) {
-  p, li {
+  p, li a {
     font-size: 19.2px;
   }
+}
+
+p, li, i {
+  color: #fef4c8;
+}
+
+a {
+  text-decoration: none;
+  color: #fef4c8;
+  padding: 10px;
+  background-color: #e09a25;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #395665;
+  background-color: #fef4c8;
 }
 
 h1 {
@@ -63,7 +89,7 @@ h1 {
 }
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -77,7 +103,7 @@ h3 {
 }
 @media screen and (min-width: 600px) {
   h3 {
-    font-size: 18px;
+    font-size: 19.8px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -87,14 +113,130 @@ h3 {
 }
 
 body {
-  background-color: #476d7e;
+  background-color: #395665;
 }
-
-.wrapper {
+body #navbar-plh .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #navbar-plh .navbar .logo {
+  max-width: 400px;
+  height: auto;
+  margin: 30px;
+  margin-bottom: 0;
+  display: flex;
+  -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+}
+@media screen and (min-width: 1025px) {
+  body #navbar-plh .navbar nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+body #navbar-plh .navbar nav ul {
+  margin: 30px;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  body #navbar-plh .navbar nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body #navbar-plh .navbar nav ul {
+    flex-wrap: nowrap;
+    max-width: 1011px;
+  }
+}
+body #navbar-plh .navbar nav ul li {
+  margin: 5px 0;
+}
+@media screen and (min-width: 600px) {
+  body #navbar-plh .navbar nav ul li {
+    width: calc(33.32% - 10px);
+    margin: 5px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body #navbar-plh .navbar nav ul li {
+    width: 145px;
+  }
+}
+body .wrapper {
   display: flex;
   flex-direction: column;
   height: max-content;
-  margin: 0 auto;
+  max-width: 1080px;
+  margin: 0 30px;
+}
+@media screen and (min-width: 1140px) {
+  body .wrapper {
+    margin: 0 auto;
+  }
+}
+body .wrapper .print-kindle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .wrapper .print-kindle .pk-card {
+  width: calc(100vw - 60px);
+  height: max-content;
+  margin: 30px 0;
+  max-width: 600px;
+  border: 50px solid transparent;
+  border-image: url("/img/soil.png") 38%;
+}
+body .wrapper .print-kindle .pk-card .inner {
+  background-color: #e09a25;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wrapper .print-kindle .pk-card .inner img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+body .wrapper .print-kindle .pk-card .inner p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 10px;
+}
+body .wrapper .review .review-text .quotert {
+  width: 28px;
+  font-size: 2em;
+  text-align: end;
+  margin: 0 0 0 calc(100% - 28px);
+}
+body .wrapper .review .review-text p i {
+  font-size: 2em;
+  margin: 10px 0;
+}
+body .wrapper .review .review-text .quoteby {
+  margin-left: 20%;
+  margin-bottom: 30px;
+}
+body #footer-plh .footer {
+  width: 100%;
+  height: max-content;
+  background-color: #e09a25;
+  padding: 30px;
+  display: flex;
+  border: 50px solid transparent;
+  border-width: 40px 0px 0px 0px;
+  border-image: url("/img/soil.png") 38%;
+}
+body #footer-plh .footer #copy {
+  color: #395665;
 }
 
 .hide {
