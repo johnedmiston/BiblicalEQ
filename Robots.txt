@@ -1,0 +1,31 @@
+# Robots.txt for Biblical EQ - Emotional Intelligence the Christian Way
+# https://alexander-weinhart.github.io/BiblicalEQ---johnedmiston/
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow common sensitive directories (if they exist)
+Disallow: /.git/
+
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /fonts/
+
+# Crawl delay to be respectful (optional)
+Crawl-delay: 1
+
+# Sitemap location (create this when you have a sitemap)
+#Sitemap: https://alexander-weinhart.github.io/BiblicalEQ---johnedmiston/sitemap.xml
