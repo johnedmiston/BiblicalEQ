@@ -185,14 +185,14 @@ body{
                         width: calc((100% / 1) - $closewidth);
                         margin: calc($closewidth / 2) 0;
                         @media screen and (min-width: 600px){
-                            width: calc((100% / 2) - $closewidth);
+                            width: calc((100% / 4) - $closewidth);
                             margin: calc($closewidth / 2);
                         }
                         @media screen and (min-width: 1025px){
-                            width: calc((100% / 3) - $closewidth);
+                            width: calc((100% / 4) - $closewidth);
                         }
                         @media screen and (min-width: 1500px){
-                            width: calc((100% / 6) - $closewidth);
+                            width: calc((100% / 7) - $closewidth);
                         }
                     }
                 }
@@ -376,10 +376,13 @@ hr{
                 width:100%;
                 height: 670px;
                 @media screen and (min-width: 600px){
-                    height:730px;
+                    height:720px;
+                }
+                @media screen and (min-width: 1025px){
+                    height: 780px;
                 }
                 @media screen and (min-width: 2500px){
-                    height:830px;
+                    height:1100px;
                 }
                 margin:0px;
                 .card-content{
@@ -422,6 +425,7 @@ hr{
                                     width:100%;
                                     height:100%;
                                     font-size:50px;
+                                    color:$box-foreground
                                 }
                             }
                         }
@@ -430,12 +434,14 @@ hr{
                                 width: 100%
                             }
                             .card-header{
+                                padding: $gridwidth
                                 h2{
                                     color:$box-foreground;
                                 }
                             }
                             .card-desc{
                                 p{
+                                    text-align: left;
                                     color:$box-foreground;
                                 }
                             }
@@ -458,6 +464,7 @@ hr{
     }
 }
 .watch{
+    max-width: 1000px;
     .two-col{
         display:flex;
         flex-direction: column;
@@ -621,9 +628,6 @@ hr{
     }
 }
 .author{
-    img{
-
-    }
     .john-quote{
         .quotert{
             width:28px;
@@ -655,6 +659,7 @@ hr{
     position: relative;
     height:auto;
     width:calc(100%);
+    max-width: 1000px;
     #slider{
         overflow:hidden;
         position:relative;
@@ -764,14 +769,14 @@ hr{
     justify-content: center;
     margin: $gridwidth calc($closewidth / 2);
     @media screen and (min-width: 600px){
-        flex-direction: row;
-        justify-content: space-between;        
+        flex-direction: row;       
     }
     div{
         width:100%;
+        margin:calc($gridwidth / 2);
         @media screen and (min-width: 600px){
             width:calc(50% - $closewidth);
-            
+            max-width: 1000px;
         }
         margin: calc($closewidth / 2);
     }
@@ -799,6 +804,9 @@ hr{
     .buy-book.author{
         display:flex;
         flex-direction: column;
+        h2{
+            margin-bottom: $closewidth;
+        }
         .book-links{
             display:flex;
             flex-direction: row;
@@ -806,6 +814,7 @@ hr{
             align-items: center;
             width:100%;
             margin-bottom: $gridwidth;
+            
             a{
                 width: calc(50% - $closewidth);
                 height: 80px;
@@ -820,4 +829,102 @@ hr{
         
     }
 }
-
+.sneak-peek{
+    margin: 0 $gridwidth;
+    
+    .box{
+        background-color: $box-background;
+        padding: $closewidth;
+        border-radius: $borderRadius;
+        -webkit-border-radius: $borderRadius;
+        -moz-border-radius: $borderRadius;
+        -ms-border-radius: $borderRadius;
+        -o-border-radius: $borderRadius;
+        margin: $closewidth 0;
+        h1{
+            color: $box-foreground;
+        }
+        h2{
+            color: $box-foreground;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding:calc($closewidth / 2);
+        }
+        a{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: $foreground;
+            background-color: $background;
+            padding: calc($closewidth /2);
+            height:60px;
+            &:hover{
+                color: $hover-foreground;
+                background-color: $hover;
+            }
+        }
+        li{
+            list-style-type: none;
+            margin: calc($closewidth /2);
+            
+        }
+    }
+}
+.wrapper.email{
+    max-width: 1000px;
+    margin: 0 auto;
+    h1{
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+    .box{
+        background-color: $box-background;
+        
+        padding: $closewidth;
+        border-radius: $borderRadius;
+        -webkit-border-radius: $borderRadius;
+        -moz-border-radius: $borderRadius;
+        -ms-border-radius: $borderRadius;
+        -o-border-radius: $borderRadius;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom:$gridwidth;
+        h2, p{
+            color: $box-foreground;
+        }
+        p{
+            margin-top: $closewidth;
+        }
+        img{
+            width: 50%;
+            height: auto;
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+        }
+        a{
+            background-color: $background;
+            color: $foreground;
+            margin: $gridwidth 0 0 0;
+            padding: calc($closewidth);
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background-color: $hover;
+                color: $hover-foreground;
+            }
+        }
+    }
+}

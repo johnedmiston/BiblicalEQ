@@ -6,6 +6,9 @@ slideWidth = 0,
 topHeight = 0,
 slideCount = slides.length;
 
+var sliderInterval = null;
+var sliderTimeout = null;
+
 //Defining slide width
 if (slideCount > 0){
     slideWidth = slides[0].offsetWidth + 30;
@@ -36,6 +39,39 @@ images.forEach(function(image) {
 // Call initializeSlider on window load as a fallback
 window.addEventListener('load', initializeSlider);
 
+// --- Slider Interval Logic ---
+
+function startSliderInterval() {
+    sliderInterval = setInterval(function() {
+        if (cursor < slideCount - 1) {
+            moveSlides('forward');
+            cursor++;
+        } else {
+            moveSlides('go to beginning');
+            cursor = 0;
+        }
+    }, 6000);
+}
+
+function resetSliderIntervalWithDelay() {
+    // Clear any running interval or timeout
+    if (sliderInterval) {
+        clearInterval(sliderInterval);
+        sliderInterval = null;
+    }
+    if (sliderTimeout) {
+        clearTimeout(sliderTimeout);
+        sliderTimeout = null;
+    }
+    // Wait 6 seconds, then restart the interval
+    sliderTimeout = setTimeout(function() {
+        startSliderInterval();
+    }, 6000);
+}
+
+// Start the interval initially
+startSliderInterval();
+
 //Button Event Listeners Go Here
 document.getElementById('next').addEventListener('click', function(event){
     event.preventDefault();
@@ -47,6 +83,7 @@ document.getElementById('next').addEventListener('click', function(event){
         moveSlides('go to beginning');
         cursor = 0;
     };
+    resetSliderIntervalWithDelay();
 });
 document.getElementById('prev').addEventListener('click', function(event){
     event.preventDefault();
@@ -58,6 +95,7 @@ document.getElementById('prev').addEventListener('click', function(event){
         moveSlides('go to end');
         cursor = slideCount - 1;
     };
+    resetSliderIntervalWithDelay();
 });
 
 //END Button Event Listeners
@@ -102,13 +140,3 @@ function calculateTallestSlide() {
     }
     slider.style.height = topHeight + 'px';
 }
-setInterval(function() {
-    if (cursor < slideCount - 1) {
-        moveSlides('forward');
-        cursor++;
-    } else {
-        moveSlides('go to beginning');
-        cursor = 0;
-    }
-    
-}, 6000);

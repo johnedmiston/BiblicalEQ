@@ -58,5 +58,11 @@ var session = [
         title: "Session 10 - Social Skills",
         vidUrl:"https://www.youtube.com/embed/x39Sx9XADFg?si=6UKatJ_-QTiXXOzJ",
         description: "Complete your Biblical EQ journey. Think critically of reading emotions across cultures with God's guidance, avoid false positives/negatives, and express emotions with perfect timing. Build strong communities through truth-in-love relationships and practical ministry rooted in Christ. Learn the importance of agape love!"
+    },
+    {
+        id: 10,
+        title: "Extra: Dealing With Spiritual Moods",
+        vidUrl:"https://www.youtube.com/embed/BT0Ys4YOX7Q?si=pc5z5SasnPeROrNT",
+        description: "Moods can be anywhere for just inconvenient to absolutely life-dominating. In this video we will look at what the Bible says about how to deal with spiritual moods, that is how to deal with moods that are caused by sin, rebellion spiritual attack or by demonic activity."
     }
 ];

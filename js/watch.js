@@ -95,7 +95,7 @@ $(document).ready(function () {
             };
             
             // Generate cards for each session
-            if (parseInt(sessionUrl) == 9) {
+            if (parseInt(sessionUrl) == session.length - 1) {
                 $("#play-title").html('Watch the Series again');
                 for (var i = 0; i < (session.length - 1); i++) {
                     createCard(i);
