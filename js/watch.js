@@ -39,8 +39,9 @@ $(document).ready(function () {
         iframe.attr('src', sessionId.vidUrl); // Set the iframe src
         $('#title').html('<h1>' + sessionId.title + '</h1>');
         $('#description').html('<p>' + sessionId.description + '</p>');
-        $('#audio-dl').html('<a href="' + sessionAud + '" download>Download Audio</a>');
-        
+        if (sessionId.id !== 10) {
+        $('#audio-dl').html('<h2>Download Audio Version for Free</h2><a href="' + sessionAud + '" rel="noopener noreferrer" download><i class="fa-solid fa-cloud-arrow-down"></i><br>Download Audio</a>');
+        }  
         // Dispatch the custom event to load the CSS after setting the src
         document.dispatchEvent(loadCSSEvent);
     } else {

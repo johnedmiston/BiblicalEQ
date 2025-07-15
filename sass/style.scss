@@ -182,7 +182,7 @@ body{
                         max-width: calc(100% - ($gridwidth*2));
                     }
                     li{
-                        width: calc((100% / 1) - $closewidth);
+                        width: calc((100% / 1));
                         margin: calc($closewidth / 2) 0;
                         @media screen and (min-width: 600px){
                             width: calc((100% / 4) - $closewidth);
@@ -204,6 +204,10 @@ body{
         flex-direction: column;
         height:max-content;
         margin:0 $gridwidth;
+        max-width:1000px;
+        @media screen and (min-width: 1060px){
+            margin: 0 auto;
+        }
         .print-kindle{
             display:flex;
             flex-direction: column;
@@ -265,7 +269,7 @@ body{
                             width: 50%;
                             
                         }
-}
+                    }
                     h2{
                         text-shadow: $shadow2;
                         color: $box-foreground;
@@ -299,7 +303,57 @@ body{
                     margin-bottom: $gridwidth;
                 }
             }
-        }  
+        }
+        .two-col{
+            display:flex;
+            flex-direction: column;
+            @media screen and (min-width: 600px){
+                    flex-direction: row;
+            }
+            margin-bottom: $gridwidth;
+            .box{
+                margin:$closewidth 0;
+                padding:$closewidth;
+                background-color: $box-background;
+                color:$box-foreground;
+                border-radius: $borderRadius;
+                -webkit-border-radius: $borderRadius;
+                -moz-border-radius: $borderRadius;
+                -ms-border-radius: $borderRadius;
+                -o-border-radius: $borderRadius;
+                margin-bottom: $gridwidth;
+                display:flex;
+                flex-direction: column;
+                img{
+                    width:100%;
+                    height:auto;
+                    max-width:500px;
+                    margin:0 auto;
+                }
+                h2{
+                    color: $box-foreground;
+                    text-align: center;
+                    margin: $closewidth auto;
+                }
+                p{
+                    margin:$closewidth 0;
+                    color: $box-foreground;
+                }
+                a{
+                    background-color: $background;
+                    color:$foreground;
+                    &:hover{
+                        background-color: $hover;
+                        color: $hover-foreground;
+                    }
+                }
+                @media screen and (min-width: 600px){
+                    width:calc(50% - $closewidth);
+                    margin: $closewidth;
+                    
+                }
+            }
+        } 
     }
     #footer-plh{
         .footer{
@@ -345,8 +399,11 @@ hr{
 /*video page*/
 .wrapper.wrapper-vid{
     max-width:100%;
+    @media screen and (min-width: 1060px){
+        margin: 0 auto;
+    }
     #cards-plh {
-        margin: calc($closewidth / 2) 0px;
+        margin: calc($closewidth / 2) 0 $gridwidth 0;
         display:flex;
         flex-wrap:nowrap;
         flex-direction: column;
@@ -354,7 +411,7 @@ hr{
         @media screen and (min-width: 600px){
             flex-wrap: wrap;
             flex-direction: row;
-            margin: calc($closewidth / 2);
+            margin: calc($closewidth / 2) 0 $gridwidth 0;
         }
         .card-container{
             margin: calc($closewidth / 2) 0px;
@@ -479,7 +536,7 @@ hr{
         #video-text{
             width:calc(100% - $closewidth);
             @media screen and (min-width: 600px){
-                width:calc(70% - $closewidth);
+                width:calc(60% - $closewidth);
                 
             }
             #title{
@@ -525,7 +582,7 @@ hr{
             width:100%;
             margin:0px;
             @media screen and (min-width: 600px){
-                width:calc(30% - $closewidth);
+                width:calc(40% - $closewidth);
             }
             #buy-book{
                 display:flex;
@@ -714,6 +771,7 @@ hr{
                     h2{
                         margin: $closewidth auto calc($closewidth * 2) auto;
                         text-align: center;
+                        color:$box-foreground;
                     }
                 }
             }
@@ -721,7 +779,7 @@ hr{
     }
     #prev, #next{
         text-align:center;
-        padding:8px 6px;
+        padding:10px 6px;
         position: absolute;
         top: calc(50% - (38.4px / 2));
         transform:translateY(-50%);
@@ -738,6 +796,12 @@ hr{
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+        &:hover{
+            background-color: $hover;
+            i{
+                color: $hover-foreground;
+            }
+        }
         i{
             font-size: 2em;
             color: $box-foreground;
@@ -762,6 +826,15 @@ hr{
             right: 100px; 
         }
     }
+}
+.stext{
+    padding: 0 0 $gridwidth 0;
+    h2{
+        padding-top: $gridwidth;
+        text-align: center;
+        margin: 0 auto;
+    }
+
 }
 .two-col.author{
     display:flex;
@@ -819,7 +892,7 @@ hr{
                 width: calc(50% - $closewidth);
                 height: 80px;
                 @media screen and (min-width: 600px){
-                    height: auto;
+                    height: 100px;
                 }
                 display:flex;
                 flex-direction: column;
@@ -829,10 +902,28 @@ hr{
         
     }
 }
+.box.sneak.h{
+    h1, h2, a{
+        text-align: center;
+        margin:0 auto;
+    }
+    a{
+        max-width:400px;
+    }
+    margin-bottom:$gridwidth;
+}
 .sneak-peek{
-    margin: 0 $gridwidth;
-    
+    margin: 0 $gridwidth $gridwidth $gridwidth;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 600px){
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     .box{
+        height:870px;
         background-color: $box-background;
         padding: $closewidth;
         border-radius: $borderRadius;
@@ -841,6 +932,10 @@ hr{
         -ms-border-radius: $borderRadius;
         -o-border-radius: $borderRadius;
         margin: $closewidth 0;
+        max-width:400px;
+        @media screen and (min-width: 600px){
+            margin: calc($closewidth / 2);
+        }
         h1{
             color: $box-foreground;
         }
@@ -850,16 +945,17 @@ hr{
         ul{
             list-style-type: none;
             margin: 0;
-            padding:calc($closewidth / 2);
+            padding:0;
         }
         a{
+            margin:$closewidth 0;
             display:flex;
             justify-content: center;
             align-items: center;
             color: $foreground;
             background-color: $background;
-            padding: calc($closewidth /2);
-            height:60px;
+            padding: $closewidth;
+            height:120px;
             &:hover{
                 color: $hover-foreground;
                 background-color: $hover;
@@ -867,7 +963,7 @@ hr{
         }
         li{
             list-style-type: none;
-            margin: calc($closewidth /2);
+            margin:0;
             
         }
     }
@@ -875,6 +971,9 @@ hr{
 .wrapper.email{
     max-width: 1000px;
     margin: 0 auto;
+    @media screen and (min-width: 1060px){
+        margin: 0 auto;
+    }
     h1{
         text-align: center;
         margin: 0 auto;
@@ -892,7 +991,7 @@ hr{
         display:flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom:$gridwidth;
+        margin-bottom:100px;
         h2, p{
             color: $box-foreground;
         }
@@ -924,6 +1023,178 @@ hr{
             &:hover{
                 background-color: $hover;
                 color: $hover-foreground;
+            }
+        }
+    }
+}
+.wrapper.contact{
+    max-width: 1000px;
+    margin: 0 $gridwidth;
+    @media screen and (min-width: 1060px){
+        margin: 0 auto;
+    }
+    .two-col.contact-author{
+        display:flex;
+        flex-direction: column;
+        margin:0;
+        @media screen and (min-width: 600px){
+            flex-direction: row;
+            
+        }
+        div{
+            width:100%;
+        }
+        .box.img{
+            img{
+                width:100%;
+                height:auto;
+            }
+            margin:calc($closewidth/2) 0;
+            @media screen and (min-width: 600px){
+                margin:calc($closewidth / 2);
+            }
+            background-color: $box-background;
+            color: $box-foreground;
+            box-shadow: $shadow;
+            padding: $closewidth;
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+            display:flex;
+            align-items:center;
+        }
+        .box.text{
+            margin:calc($closewidth/2) 0;
+            @media screen and (min-width: 600px){
+                margin:calc($closewidth / 2);
+            }
+            background-color: $box-background;
+            color: $box-foreground;
+            box-shadow: $shadow;
+            padding: $closewidth;
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+            display:flex;
+            flex-direction: column;
+            h1{
+                text-align: center;
+                margin: 0 auto;
+                color: $box-foreground;
+            }
+            .sub-text{
+                h3{
+                    margin:0;
+                    color: $box-foreground;
+                }
+                p{
+                    color:$box-foreground;
+                }
+                br{
+                    display: block;
+                    height:$gridwidth;
+                }
+            }
+        }
+    }
+    .box.links{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin:0 0 $gridwidth 0;
+        a{
+            width:100%;
+            background-color: $box-background;
+            color:$box-foreground;
+            padding: $closewidth;
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+            margin: calc($closewidth / 2) 0;
+        }
+        @media screen and (min-width: 600px){
+            flex-direction: row;
+            a{
+                margin: calc($closewidth / 2);
+                &:hover{
+                    background-color: $hover;
+                    color: $hover-foreground;
+                }
+            }
+        }
+    }
+    .text.about{
+        h1{
+            text-align: center;
+            margin: 0 auto;
+            color:$foreground;
+        }
+        p{
+            margin:$closewidth 0 $gridwidth 0;
+        }
+        .box{
+            display:flex;
+            flex-direction: column;
+            background-color: $box-background;
+            color: $box-foreground;
+            box-shadow: $shadow;
+            padding: $closewidth;
+            border-radius: $borderRadius;
+            -webkit-border-radius: $borderRadius;
+            -moz-border-radius: $borderRadius;
+            -ms-border-radius: $borderRadius;
+            -o-border-radius: $borderRadius;
+            margin-bottom: $gridwidth;
+            h1{
+                color:$box-foreground
+            }
+            ul{
+                li{
+                    color: $box-foreground;
+                }
+            }
+        }
+    }
+    .text.studies,.text.lecture{
+        display:flex;
+        flex-direction: column;
+        margin:0 $gridwidth;
+        img{
+            width:100px;
+            height:100px;
+            margin:0;
+        }
+        .text-image{
+            width:100%;
+            margin:0;
+            display:flex;
+            flex-direction: row;
+            margin-bottom: $gridwidth;
+            .text{
+                margin:0 $closewidth;
+                .place-year{
+                    display:flex;
+                    flex-direction: row;
+                    p{
+                        margin:0 $closewidth;
+                    }
+                }
+            }
+        }
+    }
+    .text.lecture{
+        
+        .place-year{
+            display:flex;
+            flex-direction: row;
+            p{
+                margin:0 $closewidth;
             }
         }
     }
