@@ -1211,4 +1211,16 @@ hr {
 }
 .wrapper.contact .text.lecture .place-year p {
   margin: 0 10px;
+}
+
+iframe, #preview iframe {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+  border: none;
+  background-color: #fef4c8;
+}
+
+#preview {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

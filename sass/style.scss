@@ -1199,3 +1199,13 @@ hr{
         }
     }
 }
+iframe, #preview iframe{
+    width:100%;
+    height: max-content;
+    overflow: hidden;
+    border: none;
+    background-color:$box-foreground;
+}
+#preview{
+    margin:0;
+}

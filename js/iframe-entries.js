@@ -1,0 +1,20 @@
+var prev = [
+    { id: 0,file: "introbeq", title: "Commencing The Journey" },
+    { id: 1, file: "2emotion", title: "Common Questions About Emotions" },
+    { id: 2, file: "3jesusm", title: "Can Jesus Be Our Model For Biblical EQ?" },
+    { id: 3, file: "4holys", title: "The Holy Spirit And The Emotional Life of Jesus" },
+    { id: 4, file: "5apostle", title: "The Emotional Life Of The Apostles, Prophets and Great Christian Leaders" },
+    { id: 5, file: "6carnal", title: "The Emotional Life of Carnal Christians" },
+    { id: 6, file: "7perspec", title: "Perception" },
+    { id: 7, file: "8spirit", title: "Perception In and By The Spirit" },
+    { id: 8, file: "9heart", title: "The Thoughts and Intentions Of The Heart" },
+    { id: 9, file: "10lcom", title: "The Learning Organization" },
+    { id: 10, file: "11physio", title: "Emotions And Our Physiology" },
+    { id: 11, file: "12mind", title: "The Masterful Mind" },
+    { id: 12, file: "13handle", title: "Getting A Handle On Our Emotions" },
+    { id: 13, file: "14strong", title: "Acting On And Reacting To Our Strong Emotions" },
+    { id: 14, file: "15recogn", title: "Recognizing And Understanding Emotions In Others" },
+    { id: 15, file: "16expres", title: "The Appropriate Expression of Emotions" },
+    { id: 16, file: "17love", title: "Love Is A Many Splendoured Thing" },
+    { id: 17, file: "18refer", title: "References" }
+];

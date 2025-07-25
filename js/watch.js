@@ -2,22 +2,6 @@ $(document).ready(function () {
     // Select the iframe element
     const iframe = $('.watch iframe');
 
-    // Function to load the CSS file
-    function loadCSS() {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'css/plyr-video.css'; // Path to your CSS file
-        document.head.appendChild(link);
-        console.log('plyr-video.css has been loaded.');
-    }
-
-    // Custom event for loading CSS
-    const loadCSSEvent = new Event('loadCSS');
-
-    // Listen for the custom loadCSS event
-    document.addEventListener('loadCSS', loadCSS);
-
     const urlParams = new URLSearchParams(window.location.search);
     const sessionUrl = urlParams.get('sessionId');
     console.log('Looking for session:', sessionUrl);
