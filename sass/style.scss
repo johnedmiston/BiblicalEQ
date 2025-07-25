@@ -58,10 +58,6 @@ $gridwidth: 30px;
 	font-family: 'Goudy-Bookletter';
 	src: url('../fonts/goudy-bookletter1911.otf') format('opentype');
 }
-@font-face {
-	font-family: 'Legendum';
-	src: url('../fonts/legendum.otf') format('opentype');
-}
 /*Element Defaults and Overrides*/
 html{
     width:100%; /*chromium engine bug fix*/
@@ -86,7 +82,6 @@ h1, h2, h3, h4, h5, h6{
 }
 p, li, a{
     font-weight: 300;
-    font-family: "Legendum", sans-serif;
     font-size: $pPhoneSize;
     @media screen and (min-width: 600px){
         font-size: $pTabletSize
