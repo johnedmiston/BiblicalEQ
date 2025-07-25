@@ -1210,6 +1210,7 @@ hr {
 
 iframe, #preview iframe {
   width: 100%;
+  min-height: 500px;
   height: max-content;
   overflow: hidden;
   border: none;
