@@ -25,9 +25,7 @@ $(document).ready(function () {
         $('#description').html('<p>' + sessionId.description + '</p>');
         if (sessionId.id !== 10) {
         $('#audio-dl').html('<h2>Download Audio Version for Free</h2><a href="' + sessionAud + '" rel="noopener noreferrer" download><i class="fa-solid fa-cloud-arrow-down"></i><br>Download Audio</a>');
-        }  
-        // Dispatch the custom event to load the CSS after setting the src
-        document.dispatchEvent(loadCSSEvent);
+        }
     } else {
         console.log('Session not found, displaying 404 page');
         $('#title').html('<h1>Session Not Found</h1>');
