@@ -34,9 +34,9 @@ $(document).ready(function() {
                 
                 // Populate the card content
                 newCard.find('.card-content').html(
-                    '<a class="card-link" href="/watch.html?sessionId=' + c + '" rel="noopener noreferrer">' +
+                    '<a class="card-link" href="watch.html?sessionId=' + c + '" rel="noopener noreferrer">' +
                         '<div class="card-thumb">' +
-                            '<img src="/img/thumbnails/' + c + '.png" alt="' + session[c].title + '" />' +
+                            '<img src="img/thumbnails/' + c + '.png" alt="' + session[c].title + '" />' +
                             '<div class="playbutton"><i class="fa-solid fa-play"></i></div>' +
                         '</div>' +
                         '<div class="card-text">' +
