@@ -353,9 +353,7 @@ body #footer-plh .footer {
   background-color: #395665;
   padding: 30px;
   display: flex;
-  border: 50px solid transparent;
-  border-width: 40px 0px 0px 0px;
-  border-image: url("/img/soil.png") 38%;
+  align-items: center;
 }
 body #footer-plh .footer #copy p {
   color: #fef4c8;

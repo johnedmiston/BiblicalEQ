@@ -357,9 +357,7 @@ body{
             background-color:$box-background;
             padding:$gridwidth;
             display:flex;
-            border: 50px solid transparent;
-            border-width: 40px 0px 0px 0px;
-            border-image:url('/img/soil.png') 38%;
+            align-items: center;
             #copy{
                 p{
                     color:$box-foreground;

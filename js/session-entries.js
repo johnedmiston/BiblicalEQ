@@ -3,7 +3,7 @@ var session = [
         id: 0,
         title: "Session 1 - Commencing the Journey",
         vidUrl:"https://www.youtube.com/embed/HCi46C-9fiE?si=ne-JJ69TJliRqWpt",
-        description: "Discover Biblical EQ - a Christian framework for emotional healing based on biblical principles. Love is the goal, Jesus is the Model and the Holy Spirit is the power to change. earn the 7 key areas for spiritual renewal, understand holy vs. fleshly emotions, and start your journey toward biblical emotional maturity. Transform your heart through Biblical wisdom and The Holy Spirit This guide is perfect for Christians seeking deeper discipleship and spiritual growth."
+        description: "Discover Biblical EQ - a Christian framework for emotional healing based on biblical principles. Love is the goal, Jesus is the Model and the Holy Spirit is the power to change. Learn the 7 key areas for spiritual renewal, understand holy vs. fleshly emotions, and start your journey toward biblical emotional maturity. Transform your heart through Biblical wisdom and The Holy Spirit. This guide is perfect for Christians seeking deeper discipleship and spiritual growth."
     },
     {
         id: 1,
@@ -33,7 +33,7 @@ var session = [
         id: 5,
         title: "Session 6 - The Learning Organization",
         vidUrl:"https://www.youtube.com/embed/8jOEP01Eo7c?si=ky6VZZH2LkDzUAHB",
-        description: "Discover the eight key tensions of building a Spirit-filled learning organization that, in turn, creates positive belief structures in people. The beliefs that we receive from the communities that we participate in are a key part pf our mental health and our growth in faith."
+        description: "Discover the eight key tensions of building a Spirit-filled learning organization that, in turn, creates positive belief structures in people. The beliefs that we receive from the communities that we participate in are a key part of our mental health and our growth in faith."
     },
     {
         id: 6,
@@ -63,6 +63,6 @@ var session = [
         id: 10,
         title: "Extra: Dealing With Spiritual Moods",
         vidUrl:"https://www.youtube.com/embed/BT0Ys4YOX7Q?si=pc5z5SasnPeROrNT",
-        description: "Moods can be anywhere for just inconvenient to absolutely life-dominating. In this video we will look at what the Bible says about how to deal with spiritual moods, that is how to deal with moods that are caused by sin, rebellion spiritual attack or by demonic activity."
+        description: "Moods can be anywhere from just inconvenient to absolutely life-dominating. In this video we will look at what the Bible says about how to deal with spiritual moods, that is how to deal with moods that are caused by sin, rebellion, spiritual attack or by demonic activity."
     }
 ];
