@@ -24,6 +24,11 @@ function initializeSlider() {
     positionSlides();
 
 }
+document.addEventListener('DOMContentLoaded', function() {
+    calculateTallestSlide();
+});
+
+
 
 // Attach load event to each image
 var images = document.querySelectorAll('.slide img');
