@@ -9,18 +9,20 @@ slideCount = slides.length;
 var sliderInterval = null;
 var sliderTimeout = null;
 
-//Defining slide width
-if (slideCount > 0){
-    slideWidth = slides[0].offsetWidth + 30;
-};
 
-//Defining slide positioning
-for (var i = 0; i < slideCount; i++){
-    slides[i].style.left = slideWidth * (i + 0) + 'px';
-};
+//Defining slide width
+function positionSlides() {
+    slideWidth = slides[0].offsetWidth; // Always recalculate for responsiveness
+    for (var i = 0; i < slideCount; i++) {
+        slides[i].style.left = ((i - cursor) * slideWidth) + 'px';
+    }
+}
+
 // Function to initialize the slider
 function initializeSlider() {
     calculateTallestSlide();
+    positionSlides();
+
 }
 
 // Attach load event to each image
@@ -37,7 +39,7 @@ images.forEach(function(image) {
 });
 
 // Call initializeSlider on window load as a fallback
-window.addEventListener('load', initializeSlider);
+
 
 // --- Slider Interval Logic ---
 
@@ -45,10 +47,8 @@ function startSliderInterval() {
     sliderInterval = setInterval(function() {
         if (cursor < slideCount - 1) {
             moveSlides('forward');
-            cursor++;
         } else {
             moveSlides('go to beginning');
-            cursor = 0;
         }
     }, 6000);
 }
@@ -78,10 +78,8 @@ document.getElementById('next').addEventListener('click', function(event){
 
     if(cursor < slideCount - 1){
         moveSlides('forward');
-        cursor++;
     } else {
         moveSlides('go to beginning');
-        cursor = 0;
     };
     resetSliderIntervalWithDelay();
 });
@@ -90,10 +88,8 @@ document.getElementById('prev').addEventListener('click', function(event){
 
     if(cursor > 0){
         moveSlides('backward');
-        cursor--;
     } else {
         moveSlides('go to end');
-        cursor = slideCount - 1;
     };
     resetSliderIntervalWithDelay();
 });
@@ -102,33 +98,25 @@ document.getElementById('prev').addEventListener('click', function(event){
 
 //Recalculates size based on the window resizing
 window.addEventListener('resize', function(){
-    slideWidth = slides[0].offsetWidth;
-
-    for (i = 0; i < slides.length; i++){
-        if(i <= cursor){
-            slides[i].style.left = '-' + slideWidth * (cursor - i) + 'px';
-        } else if (i > cursor){
-            slides[i].style.left = slideWidth * (i - cursor) + 'px';
-        };
-    };
-//Recalculating the height of the tallest size for screen resize
-calculateTallestSlide();
+    positionSlides();
+    //Recalculating the height of the tallest size for screen resize
+    calculateTallestSlide();
 });
 
 // Calculates the positioning of slides when they will be moving
 function moveSlides(direction) {
-    for (var i = 0; i < slides.length; i++) {
-        if (direction === 'backward') {
-            slides[i].style.left = (+slides[i].style.left.replace(/[^-\d\.]/g, '') + slideWidth) + 'px';
-        } else if (direction === 'forward') {
-            slides[i].style.left = (+slides[i].style.left.replace(/[^-\d\.]/g, '') - slideWidth) + 'px';
-        } else if (direction === 'go to beginning') {
-            slides[i].style.left = (i * slideWidth) + 'px'; // Reset to original positions
-        } else if (direction === 'go to end') {
-            slides[i].style.left = ((i - (slideCount - 1)) * slideWidth) + 'px'; // Move to end positions
-        };
-    };
-};
+    if (direction === 'forward') {
+        cursor = (cursor + 1) % slideCount;
+    } else if (direction === 'backward') {
+        cursor = (cursor - 1 + slideCount) % slideCount;
+    } else if (direction === 'go to beginning') {
+        cursor = 0;
+    } else if (direction === 'go to end') {
+        cursor = slideCount - 1;
+    }
+    positionSlides();
+}
+
 
 // Function calculating the height of the tallest slide
 function calculateTallestSlide() {
