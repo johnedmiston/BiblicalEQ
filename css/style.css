@@ -718,7 +718,7 @@ hr {
   position: absolute;
   margin: 0 0px 0 0;
   top: 50%;
-  left: 0;
+  left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
