@@ -718,12 +718,12 @@ hr {
   position: absolute;
   margin: 0 0px 0 0;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
   height: auto;
   width: 100%;
   text-align: left;
@@ -734,7 +734,7 @@ hr {
   margin: 0 auto;
   background-color: #395665;
   padding: 10px;
-  width: calc(100% - 60px - 20px);
+  width: 400px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -766,6 +766,7 @@ hr {
   margin: 10px auto 20px auto;
   text-align: center;
   color: #fef4c8;
+  height: 88px;
 }
 .container #prev, .container #next {
   text-align: center;
